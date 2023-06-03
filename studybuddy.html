@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>StuConnect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link class="logo" rel="icon" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+    <style>
+        a {
+            color: rgb(12, 4, 97);
+        }
+
+        body {
+            background-image: url("std.jpeg");
+            background-size: cover;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .textbox-container {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin: 20px;
+        }
+
+        .textbox-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .textbox-input {
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            border-radius: 5px;
+            padding: 8px;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+
+        .textbox-input:focus {
+            outline: none;
+        }
+
+        nav, footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="student.html">Student</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="connect.html">Connect</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <div class="content-container">
+        <div class="notification"></div>
+        <div class="notification-icon">!</div>
+        <br>
+        <div>
+            <h1><em>Study Buddy</em></h1>
+            <p>Connect with like-minded people and</p>
+            <p>coordinate to complete your projects.</p>
+        </div>    
+        <div class="textbox-container">
+            <label for="project-name" class="textbox-label">Project Name:</label>
+            <input type="text" id="project-name" class="textbox-input" />
+
+            <label for="project-description" class="textbox-label">Description:</label>
+            <textarea id="project-description" class="textbox-input" rows="4"></textarea>
+
+            <label for="project-link" class="textbox-label">Project Link:</label>
+            <input type="text" id="project-link" class="textbox-input" />
+
+            <label for="topics" class="textbox-label">Topics You Want Your Study Buddy To Know</label>
+            <select name="gateway" id="gateway" multiple>
+                <option value="paytm">Html</option>
+                <option value="rupay">css</option>
+                <option value="bhim">javascript</option>
+                <option value="j1">React.js</option>
+                <option value="j2">Node.js</option>
+                <option value="j3">Flask</option>
+            </select>
+            <input type="submit" value="Search">
+            <p></p>
+            <a href="subscription.html">Changed your mind?</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 StuConnect. All rights reserved.</p>
+    </footer>
+</body>
+</html>
