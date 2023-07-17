@@ -1,28 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>StuConnect - Payment</title>
-    <meta charset="utf=8">
-        <link rel="stylesheet" href="styles.css">
-        <link class="logo" rel="icon" href="logo.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Payment Page</title>
 </head>
-<body>
-  <div class="pay">
-    <h1>Payment Page</h1>
-    <form action="process_payment.php" method="post">
-        <label for="amount">Amount:</label>
-        <input type="text" name="amount" id="amount" required><br><br>
-        
-        <label for="gateway">Payment Gateway:</label>
-        <select name="gateway" id="gateway" required>
-            <option value="paytm">Paytm Gateway</option>
-            <option value="rupay">RuPay Gateway</option>
-            <option value="bhim">BHIM UPI Gateway</option>
-        </select><br><br>
-         
-        <input type="submit" value="Pay">
-    </form>
-  </div> 
+<body class="bg-gray-100">
+  <div class="container mx-auto px-4 py-16">
+    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <h1 class="text-2xl font-bold mb-6">Choose a Payment Method</h1>
+        <div class="flex items-center justify-between">
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+            <a href="creditcard.html">Credit Card</a>
+          </button>
+        </div>
+        <br>
+        <div class="flex items-center justify-between">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+              <a href="debitcard.html">Debit Card</a>
+            </button>
+          </div>
+          <br>
+          <div class="flex items-center justify-between">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+              <a href="paytm.html">RazorPay Gateway</a>
+            </button>
+          </div>
+          <br>
+          <div class="flex items-center justify-between">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+              <a href="Rupay.html">Paytm Gateway</a>
+            </button>
+          </div>
+      </form>
+    </div>
+  </div>
 </body>
 </html>

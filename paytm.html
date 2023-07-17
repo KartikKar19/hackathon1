@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Paytm Payment</title>
+  <script src="https://secure.paytm.in/merchantpgpui/checkoutjs/merchants/your-merchant-id.js"></script>
+</head>
+<body>
+  <h1>RazorPay Payment Gateway</h1>
+  <p></p>
+  <ul>
+    <li><a href="WhatsApp Image 2023-06-04 at 5.32.33 AM.jpeg" id="paytm-link">Pay with RazorPay</a></li>
+  </ul>
+
+  <script    var paytmLink = document.getElementById('paytm-link');
+
+    paytmLink.addEventListener('click', function(event) {
+      event.preventDefault();
+
+      var config = {
+        "root": "",
+        "flow": "DEFAULT",
+        "data": {
+          "orderId": "ORDER" + new Date().getTime(),
+          "token": "TRANSACTION_TOKEN_HERE",
+          "amount": "100.00",
+          "currency": "INR",
+        },
+        "handler": {
+          "notifyMerchant": function(eventName, data) {
+            if (eventName === 'PAYMENT_SUCCESS') {
+              alert('Payment successful!');
+              window.location.href = 'success.html';
+            } else if (eventName === 'PAYMENT_FAILURE') {
+              alert('Payment failed!');
+            }
+          }
+        }
+      };
+
+      var paytmCheckout = new PaytmCheckout(config);
+      paytmCheckout.invoke();
+    );
+
+    paypalLink.addEventListener('click', function(event) {
+      event.preventDefault();
+
+      // Add PayPal integration code here
+    });
+  </script>
+</body>
+</html>
